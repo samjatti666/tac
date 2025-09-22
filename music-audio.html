@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music & Audio Production | TAC&Co.</title>
+  <link rel="icon" type="image/png" href="pictures/tac-logo.png">
+  <link rel="stylesheet" href="service-premium.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+  <style>
+    h1, h2, h3, .section-title, .section-heading {
+      font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.01em;
+    }
+  </style>
+</head>
+<body class="dark-bg">
+  <!-- Header & Navigation (Standardized from index.html) -->
+  <header class="w-full bg-black shadow-lg h-16 sm:h-20 md:h-16 sticky top-0 z-50">
+    <nav class="section-content flex justify-between items-center h-full px-4 md:px-6 relative">
+      <a href="#hero" class="logo-link">
+        <span class="logo-corner top-left hidden md:block"></span>
+        <span class="logo-corner top-right hidden md:block"></span>
+        <img src="pictures/tac-logo.png" alt="TAC & CO. Logo" class="h-10 sm:h-12 md:h-14 w-auto logo-modern-effect">
+        <span class="logo-corner bottom-left hidden md:block"></span>
+        <span class="logo-corner bottom-right hidden md:block"></span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="block md:hidden p-2 text-white hover:text-gold transition-all duration-300" 
+              aria-label="Toggle Menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+        <div class="flex flex-col items-center justify-center min-h-screen">
+          <nav class="text-center">
+            <a href="#hero" class="mobile-link">
+              <i class="fas fa-home text-gold"></i>
+              <span>Home</span>
+            </a>
+            <a href="#services" class="mobile-link">
+              <i class="fas fa-cogs text-gold"></i>
+              <span>Services</span>
+            </a>
+            <a href="#about" class="mobile-link">
+              <i class="fas fa-users text-gold"></i>
+              <span>About Us</span>
+            </a>
+            <a href="portfolio.html" class="mobile-link">
+              <i class="fas fa-briefcase text-gold"></i>
+              <span>Portfolio</span>
+            </a>
+            <a href="#contact" class="mobile-link">
+              <i class="fas fa-envelope text-gold"></i>
+              <span>Contact</span>
+            </a>
+          </nav>
+          <!-- Cancel Icon Button - Top Right -->
+          <button id="cancelMobileMenu" class="fixed top-5 right-5 w-12 h-12 rounded-full 
+                                              flex items-center justify-center bg-transparent border-2 border-gold
+                                              text-gold hover:bg-gold hover:text-black transition-all duration-300 z-50"
+                  aria-label="Cancel">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+          <!-- Main Content Container -->
+          <div class="w-full">
+            <!-- Close Button - Bottom -->
+            <div class="flex justify-center mt-8">
+              <button id="closeMobileMenu" class="px-6 py-2 bg-gold text-black rounded hover:bg-yellow-400 
+                                                 transition-all duration-300 font-bold">
+                Close Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="desktop-nav" class="hidden md:flex space-x-8">
+        <a href="#hero" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-home mr-1"></i> Home
+        </a>
+        <div class="services-dropdown">
+          <button class="services-btn text-white hover:text-gold transition-all duration-300 font-bold flex items-center px-4 py-2">
+            <i class="fas fa-cogs mr-2"></i>
+            <span>Services</span>
+            <i class="fas fa-chevron-down ml-2 text-xs transition-transform"></i>
+          </button>
+          <div class="services-menu">
+            <!-- Cancel button for services dropdown -->
+            <button id="cancelServices" class="absolute top-2 right-2 w-8 h-8 rounded-full 
+                                              flex items-center justify-center bg-transparent border-2 border-gold
+                                              text-gold hover:bg-gold hover:text-black transition-all duration-300"
+                    aria-label="Close services menu">
+              <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="services-grid">
+              <a href="branding.html" class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <span>Branding</span>
+              </a>
+              <a href="seo.html" class="service-item">
+                <i class="fas fa-search"></i>
+                <span>SEO & Content Strategy</span>
+              </a>
+              <a href="content-creation.html" class="service-item">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Content Creation & UGC</span>
+              </a>
+              <a href="photography-cinematography.html" class="service-item">
+                <i class="fas fa-camera"></i>
+                <span>Photography & Cinematography</span>
+              </a>
+              <a href="music-audio.html" class="service-item">
+                <i class="fas fa-music"></i>
+                <span>Music & Audio Production</span>
+              </a>
+              <a href="podcast.html" class="service-item">
+                <i class="fas fa-microphone"></i>
+                <span>Podcast</span>
+              </a>
+              <a href="email-marketing.html" class="service-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email Marketing</span>
+              </a>
+              <a href="web-app.html" class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>Web & App Development</span>
+              </a>
+              <a href="social-media.html" class="service-item">
+                <i class="fas fa-share-alt"></i>
+                <span>Social Media Marketing</span>
+              </a>
+              <a href="ai-automation.html" class="service-item">
+                <i class="fas fa-robot"></i>
+                <span>AI Automation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-users mr-1"></i> About Us
+        </a>
+        <a href="portfolio.html" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-briefcase mr-1"></i> Portfolio
+        </a>
+        <a href="#contact" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-envelope mr-1"></i> Contact
+        </a>
+      </div>
+
+      <!-- Mobile Navigation Dropdown (inside header/nav, full width) -->
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+        <a href="#services" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-cogs"></i></span>
+          <span>Services</span>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-users"></i></span>
+          <span>About Us</span>
+        </a>
+        <a href="portfolio.html" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+          <span>Portfolio</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+          <span>Contact</span>
+        </a>
+        <button id="closeMobileNav" class="close-nav-btn">
+          Close Menu
+        </button>
+      </nav>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay">
+      <h1 class="hero-title" style="font-size:3.2rem; color:var(--gold); text-shadow:0 2px 24px #ffce00aa;">Music & Audio Production</h1>
+      <p class="hero-subtitle" style="font-size:1.3rem; color:#fff9de; margin-bottom:1.5rem;">Luxury sound, crafted for your brand. From signature jingles to immersive soundscapes, we make your message unforgettable.</p>
+      <a href="#service-overview" class="cta-btn glow" style="font-size:1.2rem;">Explore Our Audio Services</a>
+    </div>
+  </section>
+
+  <!-- Service Overview -->
+  <section id="service-overview" class="service-overview stack-overview" style="padding-top:3.5rem;">
+    <h2 class="section-title" style="font-size:2.5rem; color:var(--gold);">WHY MUSIC & AUDIO MATTERS</h2>
+    <div class="stack-3d luxury-stack">
+      <div class="stack-card" style="background:#232323;">
+        <i class="fas fa-music gold"></i>
+        <h3>Signature Sound</h3>
+        <p>We craft audio that’s unmistakably yours—luxury, clarity, and power.</p>
+      </div>
+      <div class="stack-card" style="background:#232323;">
+        <i class="fas fa-headphones gold"></i>
+        <h3>Immersive Experience</h3>
+        <p>From podcasts to ads, we create soundscapes that captivate.</p>
+      </div>
+      <div class="stack-card" style="background:#232323;">
+        <i class="fas fa-bolt gold"></i>
+        <h3>Fast Turnaround</h3>
+        <p>Get your audio delivered with speed and precision.</p>
+      </div>
+    </div>
+    <div class="overview-highlights" style="margin-top:2.5rem;"><span class="highlight"><i class="fas fa-star gold"></i> 100+ successful audio projects</span><span class="highlight"><i class="fas fa-microphone gold"></i> Studio-grade quality</span></div>
+  </section>
+
+  <!-- Benefits Grid -->
+  <section class="benefits-grid">
+    <!-- Benefits will be injected by JS -->
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section process-cards-section" style="padding-top:3.5rem;">
+    <h2 class="section-title" style="font-size:2.2rem; color:var(--gold);">Our Process</h2>
+    <div class="process-cards luxury-process-cards">
+      <div class="process-card" style="background:#232323;">
+        <div class="process-icon gold"><i class="fas fa-lightbulb"></i></div>
+        <h3>Concept</h3>
+        <p>We brainstorm and define your unique sound.</p>
+      </div>
+      <div class="process-card" style="background:#232323;">
+        <div class="process-icon gold"><i class="fas fa-microphone"></i></div>
+        <h3>Production</h3>
+        <p>Studio-quality recording, mixing, and mastering.</p>
+      </div>
+      <div class="process-card" style="background:#232323;">
+        <div class="process-icon gold"><i class="fas fa-rocket"></i></div>
+        <h3>Delivery</h3>
+        <p>We deliver polished audio, ready for the world.</p>
+      </div>
+    </div>
+    <div class="timeline-cta" style="margin-top:2.5rem;">
+      <a href="contact.html" class="cta-btn glow" style="font-size:1.1rem;">Get Your Sound</a>
+    </div>
+  </section>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="service-premium.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+/* 3D Carousel Styles */
+.services-carousel-3d-wrapper {
+    perspective: 2000px;
+    width: 100%;
+    max-width: 1200px;
+        height: 1000px;
+    position: relative;
+    margin: 0 auto;
+        padding: 600px 0 100px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.services-carousel-3d {
+    position: relative;
+    width: 100%;
+        height: 800px;
+    transform-style: preserve-3d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+        transform: none;
+}
+
+.carousel-card {
+    position: absolute;
+    width: 80px !important;
+    height: 24px !important;
+    left: 50%;
+    /* Default for mobile/tablet */
+    top: 40%;
+}
+
+@media (min-width: 1024px) {
+    .carousel-card {
+        top: 60%;
+    }
+}
+
+.carousel-card .card-inner {
+    background: rgba(30, 30, 40, 0.9);
+    border-radius: 1rem;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    backface-visibility: hidden;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    background: rgba(30, 30, 40, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+.card-image-wrapper {
+    height: 16px !important;
+    overflow: hidden;
+    position: relative;
+    border-radius: 12px 12px 0 0;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.card-content {
+    padding: 1.25rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, rgba(30, 30, 40, 0.95), rgba(20, 20, 30, 0.98));
+}
+
+.card-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Position cards in 3D space */
+.carousel-card[style*="--i:0"] { transform: translate(-50%, -50%) rotateY(0deg) translateZ(200px) translateY(0); }
+.carousel-card[style*="--i:1"] { transform: translate(-50%, -50%) rotateY(60deg) translateZ(200px) translateY(0); }
+.carousel-card[style*="--i:2"] { transform: translate(-50%, -50%) rotateY(120deg) translateZ(200px) translateY(0); }
+.carousel-card[style*="--i:3"] { transform: translate(-50%, -50%) rotateY(180deg) translateZ(200px) translateY(0); }
+.carousel-card[style*="--i:4"] { transform: translate(-50%, -50%) rotateY(240deg) translateZ(200px) translateY(0); }
+.carousel-card[style*="--i:5"] { transform: translate(-50%, -50%) rotateY(300deg) translateZ(200px) translateY(0); }
+
+/* Active card styles */
+.carousel-card.active {
+    z-index: 1;
+}
+
+/* Hover effects */
+.carousel-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+

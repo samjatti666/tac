@@ -1,0 +1,160 @@
+.visionaries-container {
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.visionaries-scroll {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+    gap: 1rem;
+    padding: 1rem;
+    scroll-behavior: smooth;
+    transition: transform 0.5s ease-in-out;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+}
+
+.visionaries-scroll::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari and Opera */
+}
+
+.visionary-card {
+    flex: 0 0 300px;
+    scroll-snap-align: center;
+    width: 100%;
+    min-width: 280px; /* Minimum card width */
+    max-width: 300px; /* Maximum card width */
+}
+
+/* Adjust card size for different screen sizes */
+@media (max-width: 768px) {
+    .visionary-card {
+        flex: 0 0 85%;
+        min-width: 250px;
+        max-width: 85%;
+        margin: 0 auto;
+        transform: none !important;
+        transition: none !important;
+    }
+    
+    .visionaries-scroll {
+        gap: 0.5rem;
+        padding: 0.5rem;
+        scroll-behavior: auto;
+        transition: none !important;
+    }
+
+    /* Disable all animations on mobile */
+    .slide-left, .slide-right {
+        animation: none !important;
+    }
+
+    /* Disable hover effects and transitions on mobile */
+    .visionary-card .absolute {
+        transition: none !important;
+    }
+
+    .visionary-card:hover .absolute,
+    .group-hover .absolute {
+        opacity: 1 !important;
+    }
+
+    /* Keep the bottom overlay always visible on mobile */
+    .visionary-card .absolute.bottom-0 {
+        opacity: 1 !important;
+    }
+
+    /* Disable hover effect on images */
+    .visionary-card img {
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .visionary-card:hover img,
+    .group:hover img {
+        transform: none !important;
+    }
+}
+
+.scroll-controls {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1920px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    z-index: 100;
+}
+
+/* Hide navigation on mobile and smaller screens */
+@media (max-width: 768px) {
+    .scroll-controls {
+        display: none;
+    }
+}
+
+.scroll-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid #B8860B;
+    color: #B8860B;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    pointer-events: auto;
+    transition: all 0.3s ease;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.scroll-btn.scroll-prev {
+    left: 20px;
+}
+
+.scroll-btn.scroll-next {
+    right: 20px;
+}
+
+.scroll-btn:hover {
+    background-color: #B8860B;
+    color: black;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 15px rgba(184, 134, 11, 0.5);
+}
+
+.scroll-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    transform: translateY(-50%) scale(0.9);
+}
+
+@keyframes slideLeft {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slideRight {
+    from { transform: translateX(-100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+.slide-left {
+    animation: slideLeft 0.5s ease-out forwards;
+}
+
+.slide-right {
+    animation: slideRight 0.5s ease-out forwards;
+}

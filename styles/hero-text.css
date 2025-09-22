@@ -1,0 +1,50 @@
+/* Hero Text Responsive Styles */
+.hero-text {
+    text-align: center;
+    max-width: 90vw;
+    margin: 0 auto;
+}
+
+@media (max-width: 640px) {
+    .hero-text span {
+        font-size: 2.5rem; /* 40px */
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+    }
+}
+
+@media (min-width: 641px) and (max-width: 768px) {
+    .hero-text span {
+        font-size: 3rem; /* 48px */
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+    }
+}
+
+/* Animation for text hover */
+.hero-text span span {
+    display: inline-block;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+}
+
+.hero-text span span:hover {
+    transform: scale(1.05);
+}
+
+/* Special styling for RELATIONSHIPS text */
+.relationships-glow {
+    position: relative;
+    display: inline-block;
+    padding: 0.25rem 0;
+}
+
+/* Responsive line height adjustments */
+@media (max-width: 640px) {
+    .hero-text span {
+        margin-bottom: 0.5rem;
+    }
+    
+    .relationships-glow {
+        margin: 0.5rem 0;
+    }
+}

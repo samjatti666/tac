@@ -1,0 +1,212 @@
+/* Service-specific animations for TAC & CO. */
+
+/* Brand Elevate - Branding Animations */
+@keyframes brandPulse {
+    0% { transform: scale(1); filter: brightness(1); }
+    50% { transform: scale(1.05); filter: brightness(1.2); }
+    100% { transform: scale(1); filter: brightness(1); }
+}
+
+.brand-icon {
+    animation: brandPulse 2s ease-in-out infinite;
+}
+
+@keyframes colorSpectrum {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.brand-spectrum {
+    background: linear-gradient(90deg, #FFD700, #FDB931, #FFD700);
+    background-size: 200% 200%;
+    animation: colorSpectrum 3s ease infinite;
+}
+
+/* Photography & Cinematography Animations */
+@keyframes shutterEffect {
+    0% { clip-path: inset(0 0 0 0); }
+    15% { clip-path: inset(0 0 100% 0); }
+    30% { clip-path: inset(0 0 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+.camera-shutter {
+    animation: shutterEffect 4s ease-out;
+}
+
+@keyframes filmReel {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.film-reel {
+    animation: filmReel 10s linear infinite;
+}
+
+/* Web & App Development Animations */
+@keyframes codeTyping {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.typing-code {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: codeTyping 3s steps(50, end);
+}
+
+@keyframes floatDevice {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-device {
+    animation: floatDevice 3s ease-in-out infinite;
+}
+
+/* Social Media Marketing Animations */
+@keyframes likeEffect {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.social-like {
+    animation: likeEffect 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes shareRipple {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+}
+
+.share-button {
+    animation: shareRipple 2s infinite;
+}
+
+/* Content Creation & UGC Animations */
+@keyframes contentFade {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.content-block {
+    animation: contentFade 0.6s ease-out forwards;
+}
+
+@keyframes creativeSpin {
+    0% { transform: rotate(0deg) scale(1); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    100% { transform: rotate(360deg) scale(1); }
+}
+
+.creative-icon {
+    animation: creativeSpin 3s ease-in-out infinite;
+}
+
+/* SEO & Content Strategy Animations */
+@keyframes rankingMove {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.ranking-indicator {
+    animation: rankingMove 2s ease-in-out infinite;
+}
+
+@keyframes graphGrow {
+    from { height: 0; }
+    to { height: 100%; }
+}
+
+.analytics-bar {
+    animation: graphGrow 1.5s ease-out forwards;
+}
+
+/* Email Marketing Animations */
+@keyframes sendEmail {
+    0% { transform: translateX(0) translateY(0); opacity: 1; }
+    50% { transform: translateX(10px) translateY(-10px); opacity: 0.8; }
+    100% { transform: translateX(20px) translateY(-20px); opacity: 0; }
+}
+
+.email-fly {
+    animation: sendEmail 1s ease-out infinite;
+}
+
+/* AI Automation Animations */
+@keyframes circuitFlow {
+    0% { stroke-dashoffset: 1000; }
+    100% { stroke-dashoffset: 0; }
+}
+
+.circuit-path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: circuitFlow 3s linear forwards;
+}
+
+@keyframes dataStream {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(100%); }
+}
+
+.data-stream {
+    animation: dataStream 5s linear infinite;
+}
+
+/* Music & Audio Production Animations */
+@keyframes equalizer {
+    0% { height: 10px; }
+    50% { height: 30px; }
+    100% { height: 10px; }
+}
+
+.audio-bar {
+    animation: equalizer 0.5s ease-in-out infinite;
+}
+
+@keyframes vinylSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.vinyl-record {
+    animation: vinylSpin 4s linear infinite;
+}
+
+/* Podcast Production Animations */
+@keyframes microphoneGlow {
+    0% { box-shadow: 0 0 5px #FFD700; }
+    50% { box-shadow: 0 0 20px #FFD700; }
+    100% { box-shadow: 0 0 5px #FFD700; }
+}
+
+.microphone-icon {
+    animation: microphoneGlow 2s ease-in-out infinite;
+}
+
+/* Common Hover Effects */
+.service-card {
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 215, 0, 0.2);
+}
+
+/* Interactive Elements */
+.interactive-icon {
+    transition: all 0.3s ease;
+}
+
+.interactive-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+    cursor: pointer;
+}

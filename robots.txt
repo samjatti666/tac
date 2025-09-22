@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.tacandco.in/sitemap.xml
+
+# Optimize crawling
+Disallow: /scripts/
+Disallow: /server/
+Disallow: /test-form.html

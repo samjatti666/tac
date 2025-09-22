@@ -1,0 +1,182 @@
+/* Services Dropdown Styles */
+.services-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.services-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-size: inherit;
+  position: relative;
+}
+
+.services-btn::after {
+  content: '';
+  position: absolute;
+  left: 16px; /* Matches padding-x */
+  right: 16px;
+  bottom: 6px;
+  height: 2px;
+  background-color: #FFD700;
+  transform: scaleX(0);
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+  opacity: 0;
+  border-radius: 1px;
+}
+
+.services-btn:hover::after,
+.services-btn:focus::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+/* Active state when dropdown is open */
+.services-btn:focus,
+.services-menu:hover + .services-btn {
+  color: #FFD700;
+}
+
+.services-btn:focus::after,
+.services-menu:hover + .services-btn::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.services-btn:focus + .services-menu,
+.services-menu:hover {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.services-btn i:last-child {
+  transition: transform 0.3s ease;
+}
+
+.services-btn:focus i:last-child {
+  transform: rotate(-180deg);
+}
+
+.services-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 64px; /* Header height */
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 2rem;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid var(--gold);
+  z-index: 1000;
+}
+
+/* Cancel button styles */
+#cancelServices {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all 0.3s ease;
+  z-index: 1001;
+}
+
+.services-menu:hover #cancelServices,
+.services-btn:focus + .services-menu #cancelServices {
+  opacity: 1;
+  transform: scale(1);
+}
+
+#cancelServices:hover {
+  transform: scale(1.1) rotate(90deg);
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.3);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.service-item:hover {
+  background: rgba(212, 175, 55, 0.1);
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.service-item i {
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-right: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover i {
+  transform: scale(1.1);
+}
+
+.service-item span {
+  font-weight: 500;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .services-menu {
+    padding: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .service-item {
+    padding: 0.75rem;
+  }
+}
+
+/* Animation for service items */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-item {
+  animation: fadeInUp 0.3s ease backwards;
+}
+
+.services-grid {
+  counter-reset: service-counter;
+}
+
+.service-item {
+  counter-increment: service-counter;
+  animation-delay: calc(0.05s * var(--service-counter));
+}

@@ -1,0 +1,53 @@
+/* Mobile Navigation Styles */
+.mobile-services-menu {
+    position: relative;
+    width: 100%;
+}
+
+.mobile-services-menu .nav-item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+.mobile-services-submenu {
+    display: none;
+    padding-left: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-left: 2px solid var(--gold);
+}
+
+.mobile-services-menu:hover .mobile-services-submenu,
+.mobile-services-menu:focus-within .mobile-services-submenu {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu-item {
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.submenu-item:hover {
+    color: var(--gold);
+}
+
+/* Animation for submenu items */
+.mobile-services-submenu {
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

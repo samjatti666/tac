@@ -1,0 +1,123 @@
+/* Mobile Menu Styles */
+.mobile-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: white;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    margin: 0.5rem 0;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.mobile-link i {
+    width: 1.5rem;
+    text-align: center;
+}
+
+.mobile-link:hover {
+    color: #FFD700;
+    transform: translateX(10px);
+}
+
+/* Menu Animation */
+#mobileMenu {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mobileMenu.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#mobileMenu.active .mobile-link {
+    animation: slideIn 0.5s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Staggered animation delays */
+#mobileMenu.active .mobile-link:nth-child(1) { animation-delay: 0.1s; }
+#mobileMenu.active .mobile-link:nth-child(2) { animation-delay: 0.2s; }
+#mobileMenu.active .mobile-link:nth-child(3) { animation-delay: 0.3s; }
+#mobileMenu.active .mobile-link:nth-child(4) { animation-delay: 0.4s; }
+#mobileMenu.active .mobile-link:nth-child(5) { animation-delay: 0.5s; }
+
+/* Close button animation */
+#closeMobileMenu,
+#cancelMobileMenu {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+#mobileMenu.active #closeMobileMenu {
+    animation: fadeIn 0.5s ease 0.6s forwards;
+}
+
+#mobileMenu.active #cancelMobileMenu {
+    animation: scaleIn 0.3s ease 0.2s forwards;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8) rotate(-180deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+#cancelMobileMenu {
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    opacity: 0;
+    transform: scale(0.8);
+    pointer-events: none;
+}
+
+#mobileMenu.active #cancelMobileMenu {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+    transition: all 0.3s ease-out;
+}
+
+#cancelMobileMenu:hover {
+    transform: scale(1.1) rotate(90deg);
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.4);
+}
+
+#cancelMobileMenu i {
+    transition: transform 0.3s ease;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Menu Button Animation */
+#mobileMenuBtn i {
+    transition: transform 0.3s ease;
+}
+
+#mobileMenuBtn[aria-expanded="true"] i {
+    transform: rotate(90deg);
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}

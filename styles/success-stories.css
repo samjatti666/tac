@@ -1,0 +1,272 @@
+.success-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.success-card {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 215, 0, 0.2);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #FFD700, #FDB931);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.success-card:hover {
+    transform: translateY(-5px);
+    border-color: #FFD700;
+}
+
+.success-card:hover::before {
+    opacity: 0.1;
+}
+
+.success-card * {
+    position: relative;
+    z-index: 1;
+}
+
+.success-title {
+    font-size: 2.5rem;
+    background: linear-gradient(to right, #FFD700, #FDB931);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.metric-value {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    margin-bottom: 0.5rem;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUpIn 0.6s forwards;
+}
+
+.metric-label {
+    font-size: 1.1rem;
+    color: #ffffff;
+    opacity: 0.9;
+}
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.success-card:hover .company-logo {
+    filter: brightness(1) invert(0);
+}
+
+@keyframes fadeUpIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .success-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .success-title {
+        font-size: 2rem;
+    }
+    
+    .metric-value {
+        font-size: 2.5rem;
+    }
+}
+
+/* Scroll animation */
+.success-card.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.success-card.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Shimmer effect for numbers */
+.metric-value.animate {
+    animation: numberCount 2s ease-out forwards, shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+    }
+    100% {
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0);
+    }
+}
+
+/* Card Animations */
+.success-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.success-card:hover {
+    transform: translateY(-8px);
+}
+
+/* Gradient Line Animation */
+@keyframes lineGrow {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.gradient-line {
+    height: 2px;
+    background: linear-gradient(to right, #FFD700, #FDB931, #FFD700);
+    animation: lineGrow 0.6s ease-out forwards;
+}
+
+/* Card Glow Effect */
+.success-card:hover::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #FFD700, transparent);
+    z-index: -1;
+    filter: blur(15px);
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+}
+
+/* Metric Counter Animation */
+@keyframes countUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.metric-number {
+    animation: countUp 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    opacity: 0;
+}
+
+/* Background Pattern Animation */
+@keyframes patternFloat {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.bg-pattern {
+    animation: patternFloat 6s ease-in-out infinite;
+}
+
+/* Image Scale Animation */
+@keyframes imageScale {
+    from { transform: scale(0.95); opacity: 0.5; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.success-card img {
+    animation: imageScale 0.6s ease-out forwards;
+}
+
+/* Success Metrics Animation */
+@keyframes metricReveal {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.success-metric {
+    opacity: 0;
+    animation: metricReveal 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.success-metric:nth-child(1) { animation-delay: 0.1s; }
+.success-metric:nth-child(2) { animation-delay: 0.2s; }
+.success-metric:nth-child(3) { animation-delay: 0.3s; }
+.success-metric:nth-child(4) { animation-delay: 0.4s; }
+
+/* Hover Interactions */
+.success-card:hover .card-content {
+    transform: translateY(-5px);
+}
+
+.success-metric:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+/* Gradient Text Animation */
+@keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: gradientFlow 3s linear infinite;
+}
+
+/* Section Background Animation */
+@keyframes backgroundGlow {
+    0% { opacity: 0.5; }
+    50% { opacity: 0.8; }
+    100% { opacity: 0.5; }
+}
+
+.background-glow {
+    animation: backgroundGlow 4s ease-in-out infinite;
+}
+
+.success-story-card.animate-fade-in-up {
+  animation: fade-in-up 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  opacity: 1;
+}
+
+@keyframes fade-in-up {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}

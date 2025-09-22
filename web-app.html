@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Social Media Marketing | TAC&Co.</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <style>
+        h1, h2, h3, .section-title, .section-heading {
+            font-family: 'Montserrat', Arial, Helvetica, sans-serif !important;
+            font-weight: 700 !important;
+        }
+        p, .paragraph, .service-description, .text-paragraph {
+            font-family: 'Barlow Condensed', Arial, Helvetica, sans-serif !important;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+    </style>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service-premium.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/hero.css">
+    <link rel="stylesheet" href="styles/services-dropdown.css">
+    <link rel="stylesheet" href="styles/mobile-menu.css">
+</head>
+<body class="dark-bg service-page">
+  <!-- Header & Navigation (Standardized from index.html) -->
+  <header class="w-full bg-black shadow-lg h-16 sm:h-20 md:h-16 sticky top-0 z-50">
+    <nav class="section-content flex justify-between items-center h-full px-4 md:px-6 relative">
+      <a href="#hero" class="logo-link">
+        <span class="logo-corner top-left hidden md:block"></span>
+        <span class="logo-corner top-right hidden md:block"></span>
+        <img src="pictures/tac-logo.png" alt="TAC & CO. Logo" class="h-10 sm:h-12 md:h-14 w-auto logo-modern-effect">
+        <span class="logo-corner bottom-left hidden md:block"></span>
+        <span class="logo-corner bottom-right hidden md:block"></span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobileMenuBtn" class="block md:hidden p-2 text-white hover:text-gold transition-all duration-300" 
+              aria-label="Toggle Menu" aria-expanded="false">
+        <i class="fas fa-bars text-2xl"></i>
+      </button>
+
+      <!-- Mobile Navigation Menu -->
+      <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+        <div class="flex flex-col items-center justify-center min-h-screen">
+          <nav class="text-center">
+            <a href="#hero" class="mobile-link">
+              <i class="fas fa-home text-gold"></i>
+              <span>Home</span>
+            </a>
+            <a href="#services" class="mobile-link">
+              <i class="fas fa-cogs text-gold"></i>
+              <span>Services</span>
+            </a>
+            <a href="#about" class="mobile-link">
+              <i class="fas fa-users text-gold"></i>
+              <span>About Us</span>
+            </a>
+            <a href="portfolio.html" class="mobile-link">
+              <i class="fas fa-briefcase text-gold"></i>
+              <span>Portfolio</span>
+            </a>
+            <a href="#contact" class="mobile-link">
+              <i class="fas fa-envelope text-gold"></i>
+              <span>Contact</span>
+            </a>
+          </nav>
+          <!-- Cancel Icon Button - Top Right -->
+          <button id="cancelMobileMenu" class="fixed top-5 right-5 w-12 h-12 rounded-full 
+                                              flex items-center justify-center bg-transparent border-2 border-gold
+                                              text-gold hover:bg-gold hover:text-black transition-all duration-300 z-50"
+                  aria-label="Cancel">
+            <i class="fas fa-times text-2xl"></i>
+          </button>
+          <!-- Main Content Container -->
+          <div class="w-full">
+            <!-- Close Button - Bottom -->
+            <div class="flex justify-center mt-8">
+              <button id="closeMobileMenu" class="px-6 py-2 bg-gold text-black rounded hover:bg-yellow-400 
+                                                 transition-all duration-300 font-bold">
+                Close Menu
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="desktop-nav" class="hidden md:flex space-x-8">
+        <a href="#hero" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-home mr-1"></i> Home
+        </a>
+        <div class="services-dropdown">
+          <button class="services-btn text-white hover:text-gold transition-all duration-300 font-bold flex items-center px-4 py-2">
+            <i class="fas fa-cogs mr-2"></i>
+            <span>Services</span>
+            <i class="fas fa-chevron-down ml-2 text-xs transition-transform"></i>
+          </button>
+          <div class="services-menu">
+            <!-- Cancel button for services dropdown -->
+            <button id="cancelServices" class="absolute top-2 right-2 w-8 h-8 rounded-full 
+                                              flex items-center justify-center bg-transparent border-2 border-gold
+                                              text-gold hover:bg-gold hover:text-black transition-all duration-300"
+                    aria-label="Close services menu">
+              <i class="fas fa-times text-lg"></i>
+            </button>
+            <div class="services-grid">
+              <a href="branding.html" class="service-item">
+                <i class="fas fa-paint-brush"></i>
+                <span>Branding</span>
+              </a>
+              <a href="seo.html" class="service-item">
+                <i class="fas fa-search"></i>
+                <span>SEO & Content Strategy</span>
+              </a>
+              <a href="content-creation.html" class="service-item">
+                <i class="fas fa-pencil-alt"></i>
+                <span>Content Creation & UGC</span>
+              </a>
+              <a href="photography-cinematography.html" class="service-item">
+                <i class="fas fa-camera"></i>
+                <span>Photography & Cinematography</span>
+              </a>
+              <a href="music-audio.html" class="service-item">
+                <i class="fas fa-music"></i>
+                <span>Music & Audio Production</span>
+              </a>
+              <a href="podcast.html" class="service-item">
+                <i class="fas fa-microphone"></i>
+                <span>Podcast</span>
+              </a>
+              <a href="email-marketing.html" class="service-item">
+                <i class="fas fa-envelope"></i>
+                <span>Email Marketing</span>
+              </a>
+              <a href="web-app.html" class="service-item">
+                <i class="fas fa-laptop-code"></i>
+                <span>Web & App Development</span>
+              </a>
+              <a href="social-media.html" class="service-item">
+                <i class="fas fa-share-alt"></i>
+                <span>Social Media Marketing</span>
+              </a>
+              <a href="ai-automation.html" class="service-item">
+                <i class="fas fa-robot"></i>
+                <span>AI Automation</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <a href="#about" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-users mr-1"></i> About Us
+        </a>
+        <a href="portfolio.html" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-briefcase mr-1"></i> Portfolio
+        </a>
+        <a href="#contact" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+          <i class="fas fa-envelope mr-1"></i> Contact
+        </a>
+      </div>
+
+      <!-- Mobile Navigation Dropdown (inside header/nav, full width) -->
+      <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+        <a href="#hero" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-home"></i></span>
+          <span>Home</span>
+        </a>
+        <a href="#services" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-cogs"></i></span>
+          <span>Services</span>
+        </a>
+        <a href="#about" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-users"></i></span>
+          <span>About Us</span>
+        </a>
+        <a href="portfolio.html" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+          <span>Portfolio</span>
+        </a>
+        <a href="#contact" class="mobile-nav-link">
+          <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+          <span>Contact</span>
+        </a>
+        <button id="closeMobileNav" class="close-nav-btn">
+          Close Menu
+        </button>
+      </nav>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay">
+        <h1 class="hero-title"></h1>
+        <p class="hero-subtitle"></p>
+        <a href="#service-overview" class="cta-btn"></a>
+      </div>
+  </section>
+
+  <!-- Service Overview -->
+  <section id="service-overview" class="service-overview enhanced-overview">
+    <h2 class="section-title">WHY WEB & APP DEVELOPMENT MATTERS</h2>
+    <div class="narrative-content">
+      <div class="narrative-copy">
+        <blockquote>“Your website or app is your digital flagship. It’s not just about code—it’s about creating an experience that inspires, converts, and grows your brand.”</blockquote>
+        <div class="narrative-point"><i class="fas fa-bolt gold"></i> <span>Performance</span><p>Lightning-fast, seamless experiences that keep users engaged.</p></div>
+        <div class="narrative-point"><i class="fas fa-users gold"></i> <span>User-Centric</span><p>Designs that put your audience first, driving loyalty and action.</p></div>
+        <div class="narrative-point"><i class="fas fa-shield-alt gold"></i> <span>Security</span><p>Robust protection for your data and your users’ trust.</p></div>
+      </div>
+      <div class="narrative-visuals">
+        <div class="animated-stat">
+          <span class="stat-number">99.9%</span>
+          <span class="stat-desc">uptime for all client projects</span>
+        </div>
+        <div class="testimonial-block">
+          <p class="testimonial">“TAC&Co. built our app with precision and passion. Our users love it—and so do we.”</p>
+          <span class="client">— Real Client</span>
+        </div>
+        <div class="animated-stat">
+          <span class="stat-number">2x</span>
+          <span class="stat-desc">faster load times than industry average</span>
+        </div>
+      </div>
+    </div>
+    <!-- Zig-Zag Timeline for Web & App Value -->
+    <div class="zigzag-timeline webapp-zigzag">
+      <div class="zigzag-item left">
+        <div class="zigzag-icon"><i class="fas fa-bolt"></i></div>
+        <div class="zigzag-content">
+          <h3>Performance</h3>
+          <p>Lightning-fast, seamless experiences that keep users engaged.</p>
+        </div>
+        <div class="zigzag-line"></div>
+      </div>
+      <div class="zigzag-item right">
+        <div class="zigzag-icon"><i class="fas fa-users"></i></div>
+        <div class="zigzag-content">
+          <h3>User-Centric</h3>
+          <p>Designs that put your audience first, driving loyalty and action.</p>
+        </div>
+        <div class="zigzag-line"></div>
+      </div>
+      <div class="zigzag-item left">
+        <div class="zigzag-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="zigzag-content">
+          <h3>Security</h3>
+          <p>Robust protection for your data and your users’ trust.</p>
+        </div>
+        <div class="zigzag-line"></div>
+      </div>
+      <div class="zigzag-item right">
+        <div class="zigzag-icon"><i class="fas fa-mobile-alt"></i></div>
+        <div class="zigzag-content">
+          <h3>Mobile-First</h3>
+          <p>Optimized for every device, everywhere your users are.</p>
+        </div>
+        <div class="zigzag-line"></div>
+      </div>
+    </div>
+    <div class="overview-highlights"></div>
+  </section>
+
+  <!-- Benefits Grid -->
+  <section class="benefits-grid">
+    <!-- Benefits will be injected by JS -->
+  </section>
+
+  <!-- Process Section -->
+  <section class="process-section timeline-process">
+    <h2 class="section-title">Our Process</h2>
+    <div class="timeline-container">
+      <div class="timeline-step">
+        <div class="timeline-icon"><i class="fas fa-search"></i></div>
+        <div class="timeline-content">
+          <h3>Discovery</h3>
+          <p>We dive deep into your goals, audience, and vision.</p>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-icon"><i class="fas fa-lightbulb"></i></div>
+        <div class="timeline-content">
+          <h3>Strategy</h3>
+          <p>We craft a custom plan for your digital success.</p>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-step">
+        <div class="timeline-icon"><i class="fas fa-code"></i></div>
+        <div class="timeline-content">
+          <h3>Development</h3>
+          <p>Our team builds, tests, and perfects your solution.</p>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+      <div class="timeline-step final-step">
+        <div class="timeline-icon"><i class="fas fa-rocket"></i></div>
+        <div class="timeline-content">
+          <h3>Launch & Support</h3>
+          <p>We launch with impact and support your growth long-term.</p>
+        </div>
+        <div class="timeline-line"></div>
+      </div>
+    </div>
+    <div class="timeline-cta">
+      <a href="contact.html" class="cta-btn glow">Start Your Project</a>
+    </div>
+  </section>
+  <!-- Footer will be consistent with other pages -->
+        <footer class="bg-black text-gray-300 pt-12 pb-8 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-center md:text-left">
+                <!-- Column 1: About & Logo -->
+                <div class="space-y-6 flex flex-col items-center md:items-start">
+                    <a href="#hero" class="transition-transform hover:scale-105 duration-300">
+                        <img src="pictures/tac-logo.png" alt="TAC & CO. Logo" class="h-16 w-auto">
+                    </a>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Your premier digital partner for innovative solutions that drive growth and transform brands.
+                    </p>
+                    <div class="flex space-x-6">
+                        <a href="https://www.instagram.com/tac_.co?igsh=NnFscHRlcmRqYzU3" 
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Follow us on Instagram" 
+                           class="text-gray-400 hover:text-gold transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-instagram text-2xl"></i>
+                        </a>
+                        <a href="https://wa.me/919152600606" 
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Contact us on WhatsApp" 
+                           class="text-gray-400 hover:text-gold transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-whatsapp text-2xl"></i>
+                        </a>
+                        <a href="https://youtube.com/@tacco-t4w?si=JCcGoXq5zML1U3Oe" 
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Subscribe to our YouTube channel" 
+                           class="text-gray-400 hover:text-gold transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-youtube text-2xl"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/tac-and-co-7021b333a/" 
+                           target="_blank" rel="noopener noreferrer"
+                           aria-label="Connect with us on LinkedIn" 
+                           class="text-gray-400 hover:text-gold transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fab fa-linkedin-in text-2xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-white bg-gradient-to-r from-gold to-amber-500 bg-clip-text text-transparent">Our Services</h3>
+                    <ul class="space-y-3 text-sm grid grid-cols-1 gap-2">
+                        <li><a href="branding.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Branding & Identity
+                        </a></li>
+                        <li><a href="seo.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>SEO & Content Strategy
+                        </a></li>
+                        <li><a href="content-creation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Content Creation & UGC
+                        </a></li>
+                        <li><a href="photography-cinematography.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Photography & Cinema
+                        </a></li>
+                        <li><a href="podcast.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Podcast Production
+                        </a></li>
+                        <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>AI Automation
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-white bg-gradient-to-r from-gold to-amber-500 bg-clip-text text-transparent">Quick Links</h3>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#about" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>About Us
+                        </a></li>
+                        <li><a href="#services" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Services
+                        </a></li>
+                        <li><a href="portfolio.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Portfolio
+                        </a></li>
+                        <li><a href="#contact" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Contact
+                        </a></li>
+                        <li><a href="privacy-policy.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Privacy Policy
+                        </a></li>
+                        <li><a href="terms-of-service.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Terms of Service
+                        </a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Info -->
+                <div class="space-y-6">
+                    <h3 class="text-xl font-bold text-white bg-gradient-to-r from-gold to-amber-500 bg-clip-text text-transparent">Get in Touch</h3>
+                    <ul class="space-y-4 text-sm">
+                        <li class="flex items-start group">
+                            <i class="fas fa-map-marker-alt text-gold mt-1 mr-3 w-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"></i>
+                            <a href="https://maps.google.com/?q=1st+Floor+Room+No.104+Sanjay+Sadan,+Kisan+Nagar+02,+Thane+-400604" 
+                               target="_blank" rel="noopener noreferrer"
+                               class="text-gray-400 hover:text-gold transition-colors duration-300">
+                                1st Floor Room No.104 Sanjay Sadan, Kisan Nagar 02, Thane -400604
+                            </a>
+                        </li>
+                        <li class="flex items-center group">
+                            <i class="fas fa-envelope text-gold mr-3 w-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"></i>
+                            <a href="mailto:digital.tac.co@gmail.com" 
+                               class="text-gray-400 hover:text-gold transition-colors duration-300">
+                                digital.tac.co@gmail.com
+                            </a>
+                        </li>
+                        <li class="flex items-center group">
+                            <i class="fas fa-phone text-gold mr-3 w-4 flex-shrink-0 group-hover:scale-110 transition-transform duration-300"></i>
+                            <div class="flex flex-col space-y-1">
+                                <a href="tel:+919152600606" 
+                                   class="text-gray-400 hover:text-gold transition-colors duration-300">
+                                    +91 91526 00606
+                                </a>
+                                <a href="tel:+919324941054" 
+                                   class="text-gray-400 hover:text-gold transition-colors duration-300">
+                                    +91 93249 41054
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="border-t border-gray-800 pt-8 mt-12">
+                <div class="text-center">
+                    <p class="text-gray-500 text-sm">
+                        &copy; 2025 TAC & CO. All rights reserved. | 
+                        <a href="privacy-policy.html" class="hover:text-gold transition-colors duration-300">Privacy Policy</a> | 
+                        <a href="terms-of-service.html" class="hover:text-gold transition-colors duration-300">Terms of Service</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .text-gold {
+            color: #FFD700;
+        }
+        
+        section {
+            transition: transform 0.3s ease;
+        }
+        
+        section:hover {
+            transform: translateY(-2px);
+        }
+    </style>
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="service-premium.js"></script>
+</body>
+</html>
