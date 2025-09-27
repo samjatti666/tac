@@ -131,7 +131,7 @@
                           <i class="fas fa-music"></i>
                           <span>Music & Audio Production</span>
                         </a>
-                        <a href="podcast.html" class="service-item">
+                        <a href="http://originpodcast.in/" class="service-item">
                           <i class="fas fa-microphone"></i>
                           <span>Podcast</span>
                         </a>
@@ -195,12 +195,16 @@
             </header>
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
-    <div class="hero-content">
+    <style>
+      .branding-hero-bg {
+        background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('pictures/branding.jpg') center center/cover no-repeat;
+      }
+    </style>
+    <div class="hero-content branding-hero-bg" style="border-radius: 0 0 2.5rem 2.5rem; min-height: 420px; display: flex; align-items: center; justify-content: center;">
       <div class="hero-text">
         <div class="hero-bg-effect"></div>
         <div class="hero-overlay"></div>
         <h1 class="hero-title">Elevate Your Brand with TAC&Co.</h1>
-        <p class="hero-subtitle">Crafting identities that captivate, connect, and convert.</p>
         <a href="#contact" class="cta-btn glow mt-6">Get Started</a>  
       </div>
     </div>
@@ -320,51 +324,65 @@
   </section>
 
   <!-- Industries We Serve Section -->
-  <section class="industries-section">
-    <h2 class="section-title">INDUSTRIES WE SERVE</h2>
-    <div class="industries-grid">
-      <div class="industry-card"><i class="fas fa-store"></i><span>Real Estate</span></div>
-      <div class="industry-card"><i class="fas fa-stethoscope"></i><span>Healthcare</span></div>
-      <div class="industry-card"><i class="fas fa-graduation-cap"></i><span>Education</span></div>
-      <div class="industry-card"><i class="fas fa-briefcase"></i><span>Corporate</span></div>
-      <div class="industry-card"><i class="fas fa-tshirt"></i><span>Fashion</span></div>
+  <section class="industries-section py-16 bg-black/90">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-10 text-center">Industries We Serve</h2>
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-6 md:gap-10 justify-items-center">
+        <div class="flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform border border-gold/20">
+          <i class="fas fa-store text-gold text-3xl mb-3"></i>
+          <span class="text-white font-semibold">Real Estate</span>
+        </div>
+        <div class="flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform border border-gold/20">
+          <i class="fas fa-stethoscope text-gold text-3xl mb-3"></i>
+          <span class="text-white font-semibold">Healthcare</span>
+        </div>
+        <div class="flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform border border-gold/20">
+          <i class="fas fa-graduation-cap text-gold text-3xl mb-3"></i>
+          <span class="text-white font-semibold">Education</span>
+        </div>
+        <div class="flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform border border-gold/20">
+          <i class="fas fa-briefcase text-gold text-3xl mb-3"></i>
+          <span class="text-white font-semibold">Corporate</span>
+        </div>
+        <div class="flex flex-col items-center bg-gray-900 rounded-xl p-6 shadow-lg hover:scale-105 transition-transform border border-gold/20">
+          <i class="fas fa-tshirt text-gold text-3xl mb-3"></i>
+          <span class="text-white font-semibold">Fashion</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Types of Branding Services Section -->
-  <section class="branding-types-section unique-types-section">
-    <h2 class="section-title">TYPES OF BRANDING SERVICES WE PROVIDE</h2>
-    <div class="accordion-types-grid">
-      <div class="accordion-type-item">
-        <button class="accordion-type-header"><span><i class="fas fa-lightbulb"></i> Brand Strategy</span><i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-type-content">
-          <p>Positioning, messaging, and brand architecture for long-term success.</p>
-        </div>
-      </div>
-      <div class="accordion-type-item">
-        <button class="accordion-type-header"><span><i class="fas fa-palette"></i> Visual Identity</span><i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-type-content">
-          <p>Logo, color palette, typography, and design systems that stand out.</p>
-        </div>
-      </div>
-      <div class="accordion-type-item">
-        <button class="accordion-type-header"><span><i class="fas fa-bullhorn"></i> Brand Communication</span><i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-type-content">
-          <p>Voice, tone, and storytelling across all touchpoints.</p>
-        </div>
-      </div>
-      <div class="accordion-type-item">
-        <button class="accordion-type-header"><span><i class="fas fa-globe"></i> Digital Branding</span><i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-type-content">
-          <p>Web, social, and digital experiences that build recognition and trust.</p>
-        </div>
-      </div>
-      <div class="accordion-type-item">
-        <button class="accordion-type-header"><span><i class="fas fa-users"></i> Employer Branding</span><i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-type-content">
-          <p>Attract and retain top talent with a compelling employer brand.</p>
-        </div>
-      </div>
+  <section class="branding-types-section py-16 bg-black/80">
+    <div class="container mx-auto px-4 max-w-3xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-10 text-center">Types of Branding Services We Provide</h2>
+      <ol class="relative border-l-4 border-gold/40 ml-4">
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-lightbulb"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Brand Strategy</h3>
+          <p class="text-gray-300">Positioning, messaging, and brand architecture for long-term success.</p>
+        </li>
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-palette"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Visual Identity</h3>
+          <p class="text-gray-300">Logo, color palette, typography, and design systems that stand out.</p>
+        </li>
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-bullhorn"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Brand Communication</h3>
+          <p class="text-gray-300">Voice, tone, and storytelling across all touchpoints.</p>
+        </li>
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-globe"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Digital Branding</h3>
+          <p class="text-gray-300">Web, social, and digital experiences that build recognition and trust.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-users"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Employer Branding</h3>
+          <p class="text-gray-300">Attract and retain top talent with a compelling employer brand.</p>
+        </li>
+      </ol>
     </div>
   </section>
   <!-- How We Deliver Your Brand Vision Section -->
@@ -458,7 +476,7 @@
             <li><a href="photography-cinematography.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                 <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Photography & Cinema
             </a></li>
-            <li><a href="podcast.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+            <li><a href="http://originpodcast.in/" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                 <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Podcast Production
             </a></li>
             <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">

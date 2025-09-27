@@ -104,37 +104,32 @@
     }
 }
 
-/* Mobile responsiveness */
+
+/* Mobile responsiveness: clean and simple */
 @media (max-width: 640px) {
-    .hero-text {
-        padding-top: 2rem;
-        padding-bottom: 2rem;
-        padding-right: 2rem;
-    }
-    
-    .hero-text > div > div {
-        font-size: 2rem;
-        line-height: 1.2;
-        letter-spacing: 0.05em;
-    }
-
-    .hero-line {
-        padding-right: 0.25em;
-    }
+  .hero-text {
+    width: 100vw;
+    box-sizing: border-box;
+    text-align: right !important;
+    padding: 2rem 0 2rem 0 !important;
+    margin: 0 !important;
+  }
+  .hero-text > div,
+  .hero-text > div > div {
+    width: 100%;
+    text-align: right !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+  }
+  .hero-line {
+    text-align: right !important;
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+    display: block !important;
+  }
 }
 
-@media (min-width: 641px) and (max-width: 768px) {
-    .hero-text > div > div {
-        font-size: 2.5rem;
-        line-height: 1.2;
-        letter-spacing: 0.05em;
-    }
-    
-    .hero-text {
-        padding-right: 3rem;
-    }
-}
-}
 
 @keyframes rotate {
     from { transform: rotate(0deg); }
@@ -150,73 +145,50 @@
 
 .shape-1 {
     width: 300px;
-    height: 300px;
-    top: -150px;
-    left: -100px;
-    animation-delay: 0s;
+        .hero-text {
+            padding: 2rem 0 2rem 0;
+            width: 100vw;
+            box-sizing: border-box;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: flex-end !important;
+            justify-content: flex-end !important;
+        }
+        .hero-text > div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .hero-text > div > div {
+            font-size: 2rem;
+            line-height: 1.2;
+            letter-spacing: 0.05em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+        .hero-line {
+            padding-right: 0;
+            margin-right: 0.5rem;
+            align-self: flex-end;
+            text-align: right;
+        }
+        /* Remove left margin/padding from parent containers if any */
+        .w-full {
+            margin-left: 0 !important;
+            padding-left: 0 !important;
+        }
+        @media (max-width: 768px) {
+  .hero-text {
+    text-align: right;
+    padding-right: 20px; /* Optional: adds spacing from edge */
+  }
 }
 
-.shape-2 {
-    width: 400px;
-    height: 400px;
-    bottom: -200px;
-    right: -150px;
-    animation-delay: -5s;
-}
-
-.shape-3 {
-    width: 200px;
-    height: 200px;
-    top: 40%;
-    left: 60%;
-    animation-delay: -10s;
-}
-
-@keyframes float {
-    0%, 100% {
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% {
-        transform: translate(50px, 25px) rotate(90deg);
-    }
-    50% {
-        transform: translate(25px, 50px) rotate(180deg);
-    }
-    75% {
-        transform: translate(-25px, 25px) rotate(270deg);
-    }
-}
-
-/* Responsive Text Sizes */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-    }
-}
-
-/* CTA Buttons Hover Effects */
-.cta-button {
-    transition: all 0.3s ease;
-}
-
-.cta-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.3);
-}
-
-/* Scroll Indicator Animation */
-@keyframes bounce {
-    0%, 100% {
         transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-}
+   
 
 .animate-bounce {
     animation: bounce 2s infinite;

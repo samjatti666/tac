@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Social Media Marketing | TAC&Co.</title>
+  <title>Web & App Development | TAC&Co.</title>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600&display=swap" rel="stylesheet">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -63,7 +63,7 @@
               <i class="fas fa-users text-gold"></i>
               <span>About Us</span>
             </a>
-            <a href="portfolio.html" class="mobile-link">
+            <a href="http://originpodcast.in/" class="mobile-link">
               <i class="fas fa-briefcase text-gold"></i>
               <span>Portfolio</span>
             </a>
@@ -131,7 +131,7 @@
                 <i class="fas fa-music"></i>
                 <span>Music & Audio Production</span>
               </a>
-              <a href="podcast.html" class="service-item">
+              <a href="http://originpodcast.in/" class="service-item">
                 <i class="fas fa-microphone"></i>
                 <span>Podcast</span>
               </a>
@@ -157,7 +157,7 @@
         <a href="index.html#about" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
           <i class="fas fa-users mr-1"></i> About Us
         </a>
-        <a href="portfolio.html" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+        <a href="http://originpodcast.in/" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
           <i class="fas fa-briefcase mr-1"></i> Portfolio
         </a>
         <a href="index.html#contact" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
@@ -179,7 +179,7 @@
           <span class="nav-icon"><i class="fas fa-users"></i></span>
           <span>About Us</span>
         </a>
-        <a href="portfolio.html" class="mobile-nav-link">
+        <a href="http://originpodcast.in/" class="mobile-nav-link">
           <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
           <span>Portfolio</span>
         </a>
@@ -206,70 +206,80 @@
 
   <!-- Service Overview -->
   <section id="service-overview" class="service-overview enhanced-overview">
-    <h2 class="section-title">WHY WEB & APP DEVELOPMENT MATTERS</h2>
-    <div class="narrative-content">
-      <div class="narrative-copy">
-        <blockquote>“Your website or app is your digital flagship. It’s not just about code—it’s about creating an experience that inspires, converts, and grows your brand.”</blockquote>
-        <div class="narrative-point"><i class="fas fa-bolt gold"></i> <span>Performance</span><p>Lightning-fast, seamless experiences that keep users engaged.</p></div>
-        <div class="narrative-point"><i class="fas fa-users gold"></i> <span>User-Centric</span><p>Designs that put your audience first, driving loyalty and action.</p></div>
-        <div class="narrative-point"><i class="fas fa-shield-alt gold"></i> <span>Security</span><p>Robust protection for your data and your users’ trust.</p></div>
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center gap-12 py-12">
+      <!-- Left: Headline & Narrative -->
+      <div class="md:w-5/12 text-center md:text-left flex flex-col items-center md:items-start">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gold mb-6 leading-tight">Why Web & App <span class="text-white">Development Matters</span></h2>
+        <blockquote class="text-lg text-gray-300 mb-6 italic">“Your website or app is your digital flagship. It’s not just about code—it’s about creating an experience that inspires, converts, and grows your brand.”</blockquote>
+        <ul class="space-y-4 mb-8">
+          <li class="flex items-start gap-3"><i class="fas fa-bolt text-gold text-2xl"></i><span><b>Performance:</b> Lightning-fast, seamless experiences that keep users engaged.</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-users text-gold text-2xl"></i><span><b>User-Centric:</b> Designs that put your audience first, driving loyalty and action.</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-shield-alt text-gold text-2xl"></i><span><b>Security:</b> Robust protection for your data and your users’ trust.</span></li>
+          <li class="flex items-start gap-3"><i class="fas fa-mobile-alt text-gold text-2xl"></i><span><b>Mobile-First:</b> Optimized for every device, everywhere your users are.</span></li>
+        </ul>
+        <div class="flex flex-col gap-4 w-full">
+          <div class="bg-black/80 rounded-xl p-4 shadow border border-gold/20 flex flex-col items-center">
+            <span class="text-3xl font-bold text-gold">99.9%</span>
+            <span class="text-gray-400 text-sm">uptime for all client projects</span>
+          </div>
+          <div class="bg-black/80 rounded-xl p-4 shadow border border-gold/20 flex flex-col items-center">
+            <span class="text-3xl font-bold text-gold">2x</span>
+            <span class="text-gray-400 text-sm">faster load times than industry average</span>
+          </div>
+        </div>
       </div>
-      <div class="narrative-visuals">
-        <div class="animated-stat">
-          <span class="stat-number">99.9%</span>
-          <span class="stat-desc">uptime for all client projects</span>
+      <!-- Right: Feature Card Stack -->
+      <div class="md:w-7/12 grid grid-cols-1 sm:grid-cols-2 gap-8">
+        <div class="feature-card bg-gradient-to-br from-[#FFD700]/20 to-black rounded-xl p-6 shadow-lg border border-gold/30 hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-laptop-code text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Custom Development</h3>
+          <p class="text-gray-300">Tailored solutions for your unique business needs and goals.</p>
         </div>
-        <div class="testimonial-block">
-          <p class="testimonial">“TAC&Co. built our app with precision and passion. Our users love it—and so do we.”</p>
-          <span class="client">— Real Client</span>
+        <div class="feature-card bg-gradient-to-br from-[#FFD700]/20 to-black rounded-xl p-6 shadow-lg border border-gold/30 hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-cogs text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Seamless Integrations</h3>
+          <p class="text-gray-300">Connect your site or app with the tools and platforms you use every day.</p>
         </div>
-        <div class="animated-stat">
-          <span class="stat-number">2x</span>
-          <span class="stat-desc">faster load times than industry average</span>
+        <div class="feature-card bg-gradient-to-br from-[#FFD700]/20 to-black rounded-xl p-6 shadow-lg border border-gold/30 hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-rocket text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Scalable Solutions</h3>
+          <p class="text-gray-300">Built to grow with your business, no matter the size.</p>
         </div>
-      </div>
-    </div>
-    <!-- Zig-Zag Timeline for Web & App Value -->
-    <div class="zigzag-timeline webapp-zigzag">
-      <div class="zigzag-item left">
-        <div class="zigzag-icon"><i class="fas fa-bolt"></i></div>
-        <div class="zigzag-content">
-          <h3>Performance</h3>
-          <p>Lightning-fast, seamless experiences that keep users engaged.</p>
+        <div class="feature-card bg-gradient-to-br from-[#FFD700]/20 to-black rounded-xl p-6 shadow-lg border border-gold/30 hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-shield-alt text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Enterprise Security</h3>
+          <p class="text-gray-300">Advanced security features to protect your data and users.</p>
         </div>
-        <div class="zigzag-line"></div>
-      </div>
-      <div class="zigzag-item right">
-        <div class="zigzag-icon"><i class="fas fa-users"></i></div>
-        <div class="zigzag-content">
-          <h3>User-Centric</h3>
-          <p>Designs that put your audience first, driving loyalty and action.</p>
-        </div>
-        <div class="zigzag-line"></div>
-      </div>
-      <div class="zigzag-item left">
-        <div class="zigzag-icon"><i class="fas fa-shield-alt"></i></div>
-        <div class="zigzag-content">
-          <h3>Security</h3>
-          <p>Robust protection for your data and your users’ trust.</p>
-        </div>
-        <div class="zigzag-line"></div>
-      </div>
-      <div class="zigzag-item right">
-        <div class="zigzag-icon"><i class="fas fa-mobile-alt"></i></div>
-        <div class="zigzag-content">
-          <h3>Mobile-First</h3>
-          <p>Optimized for every device, everywhere your users are.</p>
-        </div>
-        <div class="zigzag-line"></div>
       </div>
     </div>
-    <div class="overview-highlights"></div>
   </section>
 
   <!-- Benefits Grid -->
   <section class="benefits-grid">
-    <!-- Benefits will be injected by JS -->
+    <div class="overflow-x-auto py-8">
+      <div class="flex gap-8 min-w-[700px] md:min-w-0">
+        <div class="flex-shrink-0 bg-black/80 border border-gold/30 rounded-2xl p-8 shadow-lg min-w-[260px] hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-bullseye text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Targeted Solutions</h3>
+          <p class="text-gray-300">We design and build with your audience and goals in mind.</p>
+        </div>
+        <div class="flex-shrink-0 bg-black/80 border border-gold/30 rounded-2xl p-8 shadow-lg min-w-[260px] hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-chart-line text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Measurable ROI</h3>
+          <p class="text-gray-300">Track every click, conversion, and engagement for maximum results.</p>
+        </div>
+        <div class="flex-shrink-0 bg-black/80 border border-gold/30 rounded-2xl p-8 shadow-lg min-w-[260px] hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-users text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-bold text-white mb-2">User Engagement</h3>
+          <p class="text-gray-300">Build loyal audiences who advocate for your brand.</p>
+        </div>
+        <div class="flex-shrink-0 bg-black/80 border border-gold/30 rounded-2xl p-8 shadow-lg min-w-[260px] hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-bolt text-gold text-3xl mb-4 animate-pulse"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Instant Impact</h3>
+          <p class="text-gray-300">Deliver time-sensitive features and updates to your users.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Process Section -->
@@ -313,7 +323,51 @@
       <a href="contact.html" class="cta-btn glow">Start Your Project</a>
     </div>
   </section>
-  <!-- Footer will be consistent with other pages -->
+  <!-- SEO-Optimized Additional Sections -->
+  <section class="bg-gradient-to-b from-[#0a0a0a] to-black py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Why Choose Our Web & App Development?</h2>
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="bg-black/70 rounded-xl p-6 shadow-lg border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">SEO-First Approach</h3>
+          <p class="text-gray-300">We build every website and app with SEO best practices in mind, ensuring your business ranks higher and attracts more organic traffic.</p>
+        </div>
+        <div class="bg-black/70 rounded-xl p-6 shadow-lg border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">Mobile-Optimized & Fast</h3>
+          <p class="text-gray-300">Our solutions are fully responsive, lightning-fast, and deliver a seamless experience on any device, helping you reach more customers.</p>
+        </div>
+        <div class="bg-black/70 rounded-xl p-6 shadow-lg border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">Custom Features & Integrations</h3>
+          <p class="text-gray-300">From e-commerce to custom dashboards, we deliver features tailored to your business needs, integrating the latest technologies for growth.</p>
+        </div>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Technologies We Use</h2>
+      <div class="flex flex-wrap justify-center gap-6 mb-12">
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">React.js</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">Node.js</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">Next.js</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">WordPress</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">Shopify</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">MongoDB</span>
+        <span class="inline-block bg-[#FFD700]/10 border border-[#FFD700]/30 rounded-full px-6 py-2 text-gold font-semibold text-lg">AWS</span>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Frequently Asked Questions</h2>
+      <div class="max-w-3xl mx-auto space-y-6">
+        <div class="bg-black/70 rounded-xl p-6 shadow border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">How do you ensure my website/app is SEO-friendly?</h3>
+          <p class="text-gray-300">We use semantic HTML, fast-loading code, mobile-first design, and integrate on-page SEO strategies from the start, so your site is ready to rank.</p>
+        </div>
+        <div class="bg-black/70 rounded-xl p-6 shadow border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">Can you migrate my existing site or app?</h3>
+          <p class="text-gray-300">Absolutely! We handle migrations from any platform, ensuring a smooth transition with zero downtime and improved performance.</p>
+        </div>
+        <div class="bg-black/70 rounded-xl p-6 shadow border border-[#FFD700]/20">
+          <h3 class="text-xl font-semibold text-white mb-2">What support do you offer after launch?</h3>
+          <p class="text-gray-300">We provide ongoing support, updates, and optimization to keep your digital presence secure, fast, and effective.</p>
+        </div>
+      </div>
+    </div>
+  </section>
         <footer class="bg-black text-gray-300 pt-12 pb-8 border-t border-gray-800">
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-center md:text-left">
@@ -369,7 +423,7 @@
                         <li><a href="photography-cinematography.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Photography & Cinema
                         </a></li>
-                        <li><a href="podcast.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                        <li><a href="http://originpodcast.in/" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Podcast Production
                         </a></li>
                         <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
@@ -382,13 +436,13 @@
                 <div class="space-y-6">
                     <h3 class="text-xl font-bold text-white bg-gradient-to-r from-gold to-amber-500 bg-clip-text text-transparent">Quick Links</h3>
                     <ul class="space-y-3 text-sm">
-                        <li><a href="#about" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                        <li><a href="index.html#about" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>About Us
                         </a></li>
                         <li><a href="#services" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Services
                         </a></li>
-                        <li><a href="portfolio.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                        <li><a href="http://originpodcast.in/" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Portfolio
                         </a></li>
                         <li><a href="#contact" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">

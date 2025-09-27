@@ -238,60 +238,136 @@
   </section>
 
   <!-- Service Overview -->
-  <section id="service-overview" class="service-overview ai-feature-overview">
-    <h2 class="section-title">WHY AI & AUTOMATION MATTERS</h2>
-    <div class="ai-feature-grid luxury-ai-grid">
-      <div class="ai-feature-item">
-        <i class="fas fa-robot gold"></i>
-        <h3>Efficiency</h3>
-        <p>Automate the routine, focus on what matters most.</p>
+  <section id="service-overview" class="py-16 bg-black/90">
+    <div class="container mx-auto flex flex-col md:flex-row items-center gap-12 px-4">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="pictures/ai.jpg" alt="AI Automation" class="rounded-2xl shadow-2xl w-full object-cover" loading="lazy">
       </div>
-      <div class="ai-feature-item">
-        <i class="fas fa-brain gold"></i>
-        <h3>Intelligence</h3>
-        <p>Smart solutions that learn and adapt to your business.</p>
-      </div>
-      <div class="ai-feature-item">
-        <i class="fas fa-chart-bar gold"></i>
-        <h3>Growth</h3>
-        <p>Unlock new opportunities and scale with confidence.</p>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl md:text-4xl font-bold text-gold mb-6">Why AI & Automation Matters</h2>
+        <ul class="space-y-6">
+          <li class="flex items-start gap-4">
+            <span class="text-gold text-2xl"><i class="fas fa-robot"></i></span>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Efficiency</h3>
+              <p class="text-gray-300">Automate the routine, focus on what matters most.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="text-gold text-2xl"><i class="fas fa-brain"></i></span>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Intelligence</h3>
+              <p class="text-gray-300">Smart solutions that learn and adapt to your business.</p>
+            </div>
+          </li>
+          <li class="flex items-start gap-4">
+            <span class="text-gold text-2xl"><i class="fas fa-chart-bar"></i></span>
+            <div>
+              <h3 class="text-xl font-semibold text-white mb-1">Growth</h3>
+              <p class="text-gray-300">Unlock new opportunities and scale with confidence.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="overview-highlights"></div>
   </section>
 
   <!-- Benefits Grid -->
-  <section class="benefits-grid">
-    <!-- Benefits will be injected by JS -->
+  <section class="py-16 bg-black/80">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Key AI Automation Benefits</h2>
+      <div class="overflow-x-auto">
+        <div class="flex gap-8 min-w-[700px] md:min-w-0">
+          <div class="bg-gray-900 rounded-lg p-8 shadow-lg border border-gold/30 min-w-[300px] flex-shrink-0">
+            <i class="fas fa-bolt text-gold text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-white mb-2">Increased Efficiency</h3>
+            <p class="text-gray-300">Automate repetitive tasks and free up your team for high-value work.</p>
+          </div>
+          <div class="bg-gray-900 rounded-lg p-8 shadow-lg border border-gold/30 min-w-[300px] flex-shrink-0">
+            <i class="fas fa-chart-bar text-gold text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-white mb-2">Data-Driven Insights</h3>
+            <p class="text-gray-300">Leverage AI to analyze data, predict trends, and make smarter decisions.</p>
+          </div>
+          <div class="bg-gray-900 rounded-lg p-8 shadow-lg border border-gold/30 min-w-[300px] flex-shrink-0">
+            <i class="fas fa-shield-alt text-gold text-3xl mb-4"></i>
+            <h3 class="text-xl font-semibold text-white mb-2">Enhanced Accuracy</h3>
+            <p class="text-gray-300">Reduce human error and ensure consistent, reliable results across operations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Process Section -->
-  <section id="our-process" class="process-section py-20 px-4 md:px-8 bg-black" title="Our Process">
-    <div class="container mx-auto max-w-5xl">
-  <h2 class="section-title text-4xl md:text-5xl font-bold text-center mb-12 text-gold">Our Process</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-        <div class="flex flex-col items-center text-center p-8 bg-[#181818] rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="mb-4 text-gold text-4xl"><i class="fas fa-search"></i></div>
-          <h3 class="text-xl font-bold mb-2 text-white">Discovery</h3>
-          <p class="text-gray-400">We analyze your workflow and identify automation opportunities.</p>
-        </div>
-        <div class="flex flex-col items-center text-center p-8 bg-[#181818] rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="mb-4 text-gold text-4xl"><i class="fas fa-cogs"></i></div>
-          <h3 class="text-xl font-bold mb-2 text-white">Design</h3>
-          <p class="text-gray-400">We architect smart, scalable solutions tailored to you.</p>
-        </div>
-        <div class="flex flex-col items-center text-center p-8 bg-[#181818] rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <div class="mb-4 text-gold text-4xl"><i class="fas fa-rocket"></i></div>
-          <h3 class="text-xl font-bold mb-2 text-white">Deploy</h3>
-          <p class="text-gray-400">We implement, test, and launch your AI-powered systems.</p>
-        </div>
-      </div>
+  <section id="our-process" class="py-16 bg-black/90">
+    <div class="container mx-auto px-4 max-w-5xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-12 text-center">Our AI Automation Process</h2>
+      <ol class="relative border-l-4 border-gold/40 ml-4">
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-search"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Discovery</h3>
+          <p class="text-gray-300">We analyze your workflow and identify automation opportunities.</p>
+        </li>
+        <li class="mb-12 ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-cogs"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Design</h3>
+          <p class="text-gray-300">We architect smart, scalable solutions tailored to you.</p>
+        </li>
+        <li class="ml-6">
+          <span class="absolute -left-6 flex items-center justify-center w-12 h-12 bg-gold rounded-full text-black text-2xl font-bold shadow-lg"><i class="fas fa-rocket"></i></span>
+          <h3 class="text-xl font-semibold text-white mb-2">Deploy</h3>
+          <p class="text-gray-300">We implement, test, and launch your AI-powered systems.</p>
+        </li>
+      </ol>
       <div class="flex justify-center mt-12">
         <a href="contact.html" class="cta-btn glow px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-gold to-amber-500 text-black shadow-lg hover:from-amber-500 hover:to-gold transition-all duration-300">Automate Now</a>
       </div>
     </div>
   </section>
   <!--Footer-->
+  <!-- AI Automation Benefits Section -->
+  <section class="py-16 bg-black/80">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Benefits of AI Automation</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-gray-900 rounded-lg p-6 shadow-lg border border-gold/30">
+          <i class="fas fa-bolt text-gold text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Increased Efficiency</h3>
+          <p class="text-gray-300">Automate repetitive tasks and free up your team for high-value work.</p>
+        </div>
+        <div class="bg-gray-900 rounded-lg p-6 shadow-lg border border-gold/30">
+          <i class="fas fa-chart-bar text-gold text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Data-Driven Insights</h3>
+          <p class="text-gray-300">Leverage AI to analyze data, predict trends, and make smarter decisions.</p>
+        </div>
+        <div class="bg-gray-900 rounded-lg p-6 shadow-lg border border-gold/30">
+          <i class="fas fa-shield-alt text-gold text-3xl mb-4"></i>
+          <h3 class="text-xl font-semibold text-white mb-2">Enhanced Accuracy</h3>
+          <p class="text-gray-300">Reduce human error and ensure consistent, reliable results across operations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- AI Automation FAQ Section -->
+  <section class="py-16 bg-black/90">
+    <div class="container mx-auto px-4 max-w-4xl">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-8 text-center">AI Automation FAQs</h2>
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">What processes can be automated with AI?</h3>
+          <p class="text-gray-300">From data entry and customer support to analytics and marketing, AI can streamline a wide range of business operations.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">Is AI automation secure?</h3>
+          <p class="text-gray-300">Yes, we implement robust security protocols to protect your data and ensure compliance with industry standards.</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold text-white mb-2">How quickly can I see results?</h3>
+          <p class="text-gray-300">Most clients notice measurable improvements in efficiency and accuracy within weeks of deployment.</p>
+        </div>
+      </div>
+    </div>
+  </section>
   <footer class="bg-black text-gray-300 pt-12 pb-8 border-t border-gray-800">
     <div class="container mx-auto px-4">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 text-center md:text-left">
