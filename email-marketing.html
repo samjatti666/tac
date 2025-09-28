@@ -24,7 +24,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="service-premium.css">
-    <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/animations.min.css">
     <link rel="stylesheet" href="styles/hero.css">
     <link rel="stylesheet" href="styles/services-dropdown.css">
     <link rel="stylesheet" href="styles/mobile-menu.css">
@@ -196,12 +196,17 @@
 
   <!-- Hero Section -->
   <section class="hero-section">
-      <div class="hero-bg"></div>
-      <div class="hero-overlay">
+    <style>
+      .email-hero-bg {
+        background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)), url('pictures/email-marketing.jpg') center center/cover no-repeat;
+      }
+    </style>
+    <div class="hero-bg email-hero-bg" style="min-height: 420px; display: flex; align-items: center; justify-content: center; border-radius: 0 0 2.5rem 2.5rem;">
+      <div class="hero-overlay w-full flex flex-col items-center justify-center">
         <h1 class="hero-title"></h1>
-        <p class="hero-subtitle"></p>
-        <a href="#service-overview" class="cta-btn"></a>
+        <a href="#service-overview" class="cta-btn glow text-lg font-bold mt-8" style="min-width: 200px;">Start Campaigning</a>
       </div>
+    </div>
   </section>
 
   <!-- Service Overview -->
@@ -297,9 +302,6 @@
         </div>
       </div>
     </div>
-    <div class="timeline-cta">
-      <a href="contact.html" class="cta-btn glow">Start Campaign</a>
-    </div>
   </section>
   <!-- Email Marketing Benefits Section -->
   <section class="py-16 bg-black/80">
@@ -321,6 +323,9 @@
           <h3 class="text-xl font-semibold text-white mb-2">Instant Impact</h3>
           <p class="text-gray-300">Deliver time-sensitive offers and updates directly to your audience’s inbox—fast and effective.</p>
         </div>
+         <div class="flex justify-center mt-12">
+        <a href="index.html#contact" class="cta-btn glow px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-gold to-amber-500 text-black shadow-lg hover:from-amber-500 hover:to-gold transition-all duration-300">Get Instant Engagement</a>
+      </div>
       </div>
     </div>
   </section>
@@ -430,6 +435,18 @@
                         </a></li>
                         <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>AI Automation
+                        </a></li>
+                        <li><a href="email-marketing.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Email Marketing
+                        </a></li>
+                        <li><a href="social-media.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Social Media Marketing
+                        </a></li>
+                        <li><a href="web-app.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Web & App Development
+                        </a></li>
+                        <li><a href="music-audio.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Music & Audio Production
                         </a></li>
                     </ul>
                 </div>

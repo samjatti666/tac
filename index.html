@@ -147,7 +147,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/success-stories.css">
     <link rel="stylesheet" href="styles/hero.css">
-    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/animations.min.css">
     <link rel="stylesheet" href="styles/services.css">
     <!-- Particle.js and Lottie -->
     <script defer src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -179,7 +179,8 @@
     }
     </script>
 
-    <!-- Scripts -->
+  <!-- Scripts -->
+  <script defer src="scripts/visionaries-scroll.min.js"></script>
 
     <script defer src="scripts/hero-animations.js"></script>
   <script defer src="scripts/services-carousel.js"></script>
@@ -1601,7 +1602,6 @@
             });
         </script>
         </style>
-        </style>
         <!-- Services Section -->
   <section id="services" class="hidden lg:block bg-gradient-to-b from-black via-[#0a0a0a] to-black section-fade-in before:absolute before:inset-0 before:bg-gradient-to-b before:from-black/80 before:via-[#0a0a0a]/80 before:to-black/80 min-h-screen py-40">
             <div class="section-content relative z-10 container mx-auto px-4 overflow-visible pt-20">
@@ -2393,7 +2393,7 @@
 .services-carousel-3d {
   position: relative;
   width: 340px;
-  height: 420px;
+  height: 460px;
   transform-style: preserve-3d;
   /* animation: carousel-rotate 18s linear infinite; */
   transition: animation-play-state 0.2s;
@@ -2405,7 +2405,7 @@
   position: absolute;
   top: 0; left: 0;
   width: 270px;
-  height: 350px;
+  height: 320px;
   background: rgba(30, 30, 40, 0.55);
   border-radius: 2rem;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), 0 2px 12px 0 rgba(255,215,0,0.10);
@@ -2414,7 +2414,7 @@
   -webkit-backdrop-filter: blur(12px) saturate(160%);
   display: flex;
   width: 270px;
-  height: 370px;
+  height: 320px;
   background: rgba(30, 30, 40, 0.75);
   border-radius: 1.5rem;
   box-shadow: 0 8px 32px 0 rgba(0,0,0,0.22), 0 2px 12px 0 rgba(255,215,0,0.10);
@@ -2624,6 +2624,18 @@
                         <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                             <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>AI Automation
                         </a></li>
+                        <li><a href="web-app-development.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Web & App Development
+                        </a></li>
+                        <li><a href="social-media-marketing.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Social Media Marketing
+                        </a></li>
+                        <li><a href="email-marketing.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Email, WhatsApp & SMS Marketing
+                        </a></li>
+                        <li><a href="music-audio-production.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                            <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Music & Audio Production
+                        </a></li>
                     </ul>
                 </div>
 
@@ -2740,6 +2752,7 @@
             icon.addEventListener('mouseleave', function() {
                 this.style.transform = 'scale(1) rotate(0deg)';
             });
+        });
         });
 
         // Social media links hover effect

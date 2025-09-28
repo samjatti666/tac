@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="styles/mobile-menu.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="styles/hero.css">
-        <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/animations.min.css">
         <link rel="stylesheet" href="styles/visionaries.css">
         <style>
             /* Header & Navigation Styles from index.html */
@@ -121,7 +121,7 @@
     <title>Portfolio - TAC & Co | Digital Marketing Agency</title>
     
      <!-- Favicon -->
-    <link rel="icon" href="./pictures/tac-logo.png" type="image/p   < main>
+    <link rel="icon" href="./pictures/tac-logo.png" type="image/p >
         <!-- Portfolio Hero Section -->
         <section class="portfolio-section relative min-h-[40vh] flex items-center justify-center py-24 px-4 md:px-8 overflow-hidden">
             <div id="particles-js"></div>
@@ -151,7 +151,7 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="service-details-new.css">
-    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/animations.min.css">
     <link rel="stylesheet" href="styles/hero.css">
 
     <!-- Custom Styles -->
@@ -352,182 +352,171 @@
             flex-direction: column;
         }
     </style>
-    <!-- Modern Mobile Navigation (Full Screen Overlay) -->
-    <nav class="mobile-nav" id="mobileNav">
-        <a href="index.html"><span class="nav-icon"><i class="fas fa-home"></i></span> Home</a>
-        <a href="index.html#services"><span class="nav-icon"><i class="fas fa-cogs"></i></span> Services</a>
-        <a href="index.html#about"><span class="nav-icon"><i class="fas fa-info-circle"></i></span> About Us</a>
-        <a href="portfolio.html"><span class="nav-icon"><i class="fas fa-briefcase"></i></span> Portfolio</a>
-        <a href="index.html#contact"><span class="nav-icon"><i class="fas fa-envelope"></i></span> Contact</a>
-        <button id="closeMobileNav" class="mt-8 px-4 py-2 bg-gold text-black rounded-md hover:bg-yellow-500 transition-colors duration-300">
-            Close
-        </button>
-    </nav>
 
-    <!-- Header & Navigation (Standardized from index.html) -->
-    <header class="w-full bg-black shadow-lg h-16 sm:h-20 md:h-16 sticky top-0 z-50">
-      <nav class="section-content flex justify-between items-center h-full px-4 md:px-6 relative">
-        <a href="index.html#hero" class="logo-link">
-          <span class="logo-corner top-left hidden md:block"></span>
-          <span class="logo-corner top-right hidden md:block"></span>
-          <img src="pictures/tac-logo.png" alt="TAC & CO. Logo" class="h-10 sm:h-12 md:h-14 w-auto logo-modern-effect">
-          <span class="logo-corner bottom-left hidden md:block"></span>
-          <span class="logo-corner bottom-right hidden md:block"></span>
-        </a>
-
-        <!-- Mobile Menu Button -->
-        <button id="mobileMenuBtn" class="block md:hidden p-2 text-white hover:text-gold transition-all duration-300" 
-                aria-label="Toggle Menu" aria-expanded="false">
-          <i class="fas fa-bars text-2xl"></i>
-        </button>
-
-        <!-- Mobile Navigation Menu -->
-        <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
-          <div class="flex flex-col items-center justify-center min-h-screen">
-            <nav class="text-center">
-              <a href="index.html#hero" class="mobile-link">
-                <i class="fas fa-home text-gold"></i>
-                <span>Home</span>
-              </a>
-              <a href="index.html#services" class="mobile-link">
-                <i class="fas fa-cogs text-gold"></i>
-                <span>Services</span>
-              </a>
-              <a href="index.html#about" class="mobile-link">
-                <i class="fas fa-users text-gold"></i>
-                <span>About Us</span>
-              </a>
-              <a href="portfolio.html" class="mobile-link">
-                <i class="fas fa-briefcase text-gold"></i>
-                <span>Portfolio</span>
-              </a>
-              <a href="index.html#contact" class="mobile-link">
-                <i class="fas fa-envelope text-gold"></i>
-                <span>Contact</span>
-              </a>
-            </nav>
-            <!-- Cancel Icon Button - Top Right -->
-            <button id="cancelMobileMenu" class="fixed top-5 right-5 w-12 h-12 rounded-full 
-                                                flex items-center justify-center bg-transparent border-2 border-gold
-                                                text-gold hover:bg-gold hover:text-black transition-all duration-300 z-50"
-                    aria-label="Cancel">
-              <i class="fas fa-times text-2xl"></i>
-            </button>
-            <!-- Main Content Container -->
-            <div class="w-full">
-              <!-- Close Button - Bottom -->
-              <div class="flex justify-center mt-8">
-                <button id="closeMobileMenu" class="px-6 py-2 bg-gold text-black rounded hover:bg-yellow-400 
-                                                   transition-all duration-300 font-bold">
-                  Close Menu
+     <!-- Header & Navigation (Standardized from index.html) -->
+  <header class="w-full bg-black shadow-lg h-16 sm:h-20 md:h-16 sticky top-0 z-50">
+    <nav class="section-content flex justify-between items-center h-full px-4 md:px-6 relative">
+      <a href="index.html#hero" class="logo-link">
+        <span class="logo-corner top-left hidden md:block"></span>
+        <span class="logo-corner top-right hidden md:block"></span>
+        <img src="pictures/tac-logo.png" alt="TAC & CO. Logo" class="h-10 sm:h-12 md:h-14 w-auto logo-modern-effect">
+        <span class="logo-corner bottom-left hidden md:block"></span>
+        <span class="logo-corner bottom-right hidden md:block"></span>
+      </a>
+       <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="block md:hidden p-2 text-white hover:text-gold transition-all duration-300" 
+                        aria-label="Toggle Menu" aria-expanded="false">
+                  <i class="fas fa-bars text-2xl"></i>
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div id="desktop-nav" class="hidden md:flex space-x-8">
-          <a href="index.html#hero" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
-            <i class="fas fa-home mr-1"></i> Home
-          </a>
-          <div class="services-dropdown">
-            <button class="services-btn text-white hover:text-gold transition-all duration-300 font-bold flex items-center px-4 py-2">
-              <i class="fas fa-cogs mr-2"></i>
-              <span>Services</span>
-              <i class="fas fa-chevron-down ml-2 text-xs transition-transform"></i>
-            </button>
-            <div class="services-menu">
-              <!-- Cancel button for services dropdown -->
-              <button id="cancelServices" class="absolute top-2 right-2 w-8 h-8 rounded-full 
-                                                flex items-center justify-center bg-transparent border-2 border-gold
-                                                text-gold hover:bg-gold hover:text-black transition-all duration-300"
-                      aria-label="Close services menu">
-                <i class="fas fa-times text-lg"></i>
-              </button>
-              <div class="services-grid">
-                <a href="branding.html" class="service-item">
-                  <i class="fas fa-paint-brush"></i>
-                  <span>Branding</span>
-                </a>
-                <a href="seo.html" class="service-item">
-                  <i class="fas fa-search"></i>
-                  <span>SEO & Content Strategy</span>
-                </a>
-                <a href="content-creation.html" class="service-item">
-                  <i class="fas fa-pencil-alt"></i>
-                  <span>Content Creation & UGC</span>
-                </a>
-                <a href="photography-cinematography.html" class="service-item">
-                  <i class="fas fa-camera"></i>
-                  <span>Photography & Cinematography</span>
-                </a>
-                <a href="music-audio.html" class="service-item">
-                  <i class="fas fa-music"></i>
-                  <span>Music & Audio Production</span>
-                </a>
-                <a href="http://originpodcast.in/" class="service-item">
-                  <i class="fas fa-microphone"></i>
-                  <span>Podcast</span>
-                </a>
-                <a href="email-marketing.html" class="service-item">
-                  <i class="fas fa-envelope"></i>
-                  <span>Email Marketing</span>
-                </a>
-                <a href="web-app.html" class="service-item">
-                  <i class="fas fa-laptop-code"></i>
-                  <span>Web & App Development</span>
-                </a>
-                <a href="social-media.html" class="service-item">
-                  <i class="fas fa-share-alt"></i>
-                  <span>Social Media Marketing</span>
-                </a>
-                <a href="ai-automation.html" class="service-item">
-                  <i class="fas fa-robot"></i>
-                  <span>AI Automation</span>
-                </a>
-              </div>
-            </div>
-          </div>
-          <a href="index.html#about" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
-            <i class="fas fa-users mr-1"></i> About Us
-          </a>
-          <a href="portfolio.html" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
-            <i class="fas fa-briefcase mr-1"></i> Portfolio
-          </a>
-          <a href="index.html#contact" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
-            <i class="fas fa-envelope mr-1"></i> Contact
-          </a>
-        </div>
+                <!-- Mobile Navigation Menu -->
+                <div id="mobileMenu" class="fixed inset-0 bg-black bg-opacity-95 z-50 hidden">
+                  <div class="flex flex-col items-center justify-center min-h-screen">
+                    <nav class="text-center">
+                      <a href="index.html#hero" class="mobile-link">
+                        <i class="fas fa-home text-gold"></i>
+                        <span>Home</span>
+                      </a>
+                      <a href="index.html#services" class="mobile-link">
+                        <i class="fas fa-cogs text-gold"></i>
+                        <span>Services</span>
+                      </a>
+                      <a href="index.html#about" class="mobile-link">
+                        <i class="fas fa-users text-gold"></i>
+                        <span>About Us</span>
+                      </a>
+                      <a href="portfolio.html" class="mobile-link">
+                        <i class="fas fa-briefcase text-gold"></i>
+                        <span>Portfolio</span>
+                      </a>
+                      <a href="index.html#contact" class="mobile-link">
+                        <i class="fas fa-envelope text-gold"></i>
+                        <span>Contact</span>
+                      </a>
+                    </nav>
+                    <!-- Cancel Icon Button - Top Right -->
+                    <button id="cancelMobileMenu" class="fixed top-5 right-5 w-12 h-12 rounded-full 
+                                                        flex items-center justify-center bg-transparent border-2 border-gold
+                                                        text-gold hover:bg-gold hover:text-black transition-all duration-300 z-50"
+                            aria-label="Cancel">
+                      <i class="fas fa-times text-2xl"></i>
+                    </button>
+                    <!-- Main Content Container -->
+                    <div class="w-full">
+                      <!-- Close Button - Bottom -->
+                      <div class="flex justify-center mt-8">
+                        <button id="closeMobileMenu" class="px-6 py-2 bg-gold text-black rounded hover:bg-yellow-400 
+                                                           transition-all duration-300 font-bold">
+                          Close Menu
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
-        <!-- Mobile Navigation Dropdown (inside header/nav, full width) -->
-        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
-          <a href="index.html#hero" class="mobile-nav-link">
-            <span class="nav-icon"><i class="fas fa-home"></i></span>
-            <span>Home</span>
-          </a>
-          <a href="index.html#services" class="mobile-nav-link">
-            <span class="nav-icon"><i class="fas fa-cogs"></i></span>
-            <span>Services</span>
-          </a>
-          <a href="index.html#about" class="mobile-nav-link">
-            <span class="nav-icon"><i class="fas fa-users"></i></span>
-            <span>About Us</span>
-          </a>
-          <a href="portfolio.html" class="mobile-nav-link">
-            <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
-            <span>Portfolio</span>
-          </a>
-          <a href="index.html#contact" class="mobile-nav-link">
-            <span class="nav-icon"><i class="fas fa-envelope"></i></span>
-            <span>Contact</span>
-          </a>
-          <button id="closeMobileNav" class="close-nav-btn">
-            Close Menu
-          </button>
-        </nav>
-      </nav>
-    </header>
+                <div id="desktop-nav" class="hidden md:flex space-x-8">
+                  <a href="index.html#hero" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+                    <i class="fas fa-home mr-1"></i> Home
+                  </a>
+                  <div class="services-dropdown">
+                    <button class="services-btn text-white hover:text-gold transition-all duration-300 font-bold flex items-center px-4 py-2">
+                      <i class="fas fa-cogs mr-2"></i>
+                      <span>Services</span>
+                      <i class="fas fa-chevron-down ml-2 text-xs transition-transform"></i>
+                    </button>
+                    <div class="services-menu">
+                      <!-- Cancel button for services dropdown -->
+                      <button id="cancelServices" class="absolute top-2 right-2 w-8 h-8 rounded-full 
+                                                        flex items-center justify-center bg-transparent border-2 border-gold
+                                                        text-gold hover:bg-gold hover:text-black transition-all duration-300"
+                              aria-label="Close services menu">
+                        <i class="fas fa-times text-lg"></i>
+                      </button>
+                      <div class="services-grid">
+                        <a href="branding.html" class="service-item">
+                          <i class="fas fa-paint-brush"></i>
+                          <span>Branding</span>
+                        </a>
+                        <a href="seo.html" class="service-item">
+                          <i class="fas fa-search"></i>
+                          <span>SEO & Content Strategy</span>
+                        </a>
+                        <a href="content-creation.html" class="service-item">
+                          <i class="fas fa-pencil-alt"></i>
+                          <span>Content Creation & UGC</span>
+                        </a>
+                        <a href="photography-cinematography.html" class="service-item">
+                          <i class="fas fa-camera"></i>
+                          <span>Photography & Cinematography</span>
+                        </a>
+                        <a href="music-audio.html" class="service-item">
+                          <i class="fas fa-music"></i>
+                          <span>Music & Audio Production</span>
+                        </a>
+                        <a href="http://originpodcast.in/" class="service-item">
+                          <i class="fas fa-microphone"></i>
+                          <span>Podcast</span>
+                        </a>
+                        <a href="email-marketing.html" class="service-item">
+                          <i class="fas fa-envelope"></i>
+                          <span>Email Marketing</span>
+                        </a>
+                        <a href="web-app.html" class="service-item">
+                          <i class="fas fa-laptop-code"></i>
+                          <span>Web & App Development</span>
+                        </a>
+                        <a href="social-media.html" class="service-item">
+                          <i class="fas fa-share-alt"></i>
+                          <span>Social Media Marketing</span>
+                        </a>
+                        <a href="ai-automation.html" class="service-item">
+                          <i class="fas fa-robot"></i>
+                          <span>AI Automation</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <a href="index.html#about" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+                    <i class="fas fa-users mr-1"></i> About Us
+                  </a>
+                  <a href="portfolio.html" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+                    <i class="fas fa-briefcase mr-1"></i> Portfolio
+                  </a>
+                  <a href="index.html#contact" class="text-white hover:text-gold transition duration-300 font-bold flex items-center">
+                    <i class="fas fa-envelope mr-1"></i> Contact
+                  </a>
+                </div>
 
+                <!-- Mobile Navigation Dropdown (inside header/nav, full width) -->
+                <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation">
+                  <a href="index.html#hero" class="mobile-nav-link">
+                    <span class="nav-icon"><i class="fas fa-home"></i></span>
+                    <span>Home</span>
+                  </a>
+                  <a href="index.html#services" class="mobile-nav-link">
+                    <span class="nav-icon"><i class="fas fa-cogs"></i></span>
+                    <span>Services</span>
+                  </a>
+                  <a href="index.html#about" class="mobile-nav-link">
+                    <span class="nav-icon"><i class="fas fa-users"></i></span>
+                    <span>About Us</span>
+                  </a>
+                  <a href="portfolio.html" class="mobile-nav-link">
+                    <span class="nav-icon"><i class="fas fa-briefcase"></i></span>
+                    <span>Portfolio</span>
+                  </a>
+                  <a href="index.html#contact" class="mobile-nav-link">
+                    <span class="nav-icon"><i class="fas fa-envelope"></i></span>
+                    <span>Contact</span>
+                  </a>
+                  <button id="closeMobileNav" class="close-nav-btn">
+                    Close Menu
+                  </button>
+                </nav>
+              </nav>
+            </header>
+
+     
     <main class="page-content">
         <!-- Portfolio Hero Section -->
         <section class="portfolio-section relative min-h-[40vh] flex items-center justify-center py-24 px-4 md:px-8 overflow-hidden">
@@ -721,6 +710,18 @@
               <li><a href="ai-automation.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
                   <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>AI Automation
               </a></li>
+                <li><a href="email-marketing.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                    <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Email Marketing
+                </a></li>
+              <li><a href="web-app.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Web & App Development
+              </a></li>
+              <li><a href="social-media.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Social Media Marketing
+              </a></li>
+              <li><a href="music-audio.html" class="footer-link flex items-center text-gray-400 hover:text-gold transition-colors duration-300">
+                  <i class="fas fa-chevron-right text-xs mr-2 text-gold"></i>Music & Audio Production
+              </a></li> 
             </ul>
           </div>
 
@@ -968,4 +969,5 @@
         });
     </script>
 </body>
+    <script src="scripts/mobile-menu.js"></script>
 </html>
