@@ -199,64 +199,98 @@
       <div class="hero-bg"></div>
       <div class="hero-overlay">
         <h1 class="hero-title"></h1>
-        <p class="hero-subtitle"></p>
-        <a href="#service-overview" class="cta-btn"></a>
+        <p class="hero-subtitle" style="font-size:1.3rem; color:#fff9de; margin-bottom:1.5rem;"></p>
+        <a href="#service-overview" class="cta-btn glow" style="font-size:1.2rem;">Book a Shoot</a>
       </div>
   </section>
 
   <!-- Service Overview -->
   <section id="service-overview" class="service-overview split-panel-overview">
-    <h2 class="section-title">WHY VISUAL STORYTELLING MATTERS</h2>
-    <div class="split-panel luxury-split">
-      <div class="split-image" style="background-image:url('pictures/photo-cinematography.jpg');"></div>
-      <div class="split-content">
-        <h3>Emotion in Every Frame</h3>
-        <p>We capture the moments that define your brand and move your audience.</p>
-        <ul class="gold-list">
-          <li><i class="fas fa-star gold"></i> Cinematic Quality</li>
-          <li><i class="fas fa-bolt gold"></i> Fast Turnaround</li>
-          <li><i class="fas fa-users gold"></i> Team of Visionaries</li>
-        </ul>
+    <div class="max-w-5xl mx-auto px-4 py-12 md:py-20">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-6 text-center tracking-tight">Why Visual Storytelling Matters</h2>
+      <div class="flex flex-col md:flex-row items-center gap-10 md:gap-16 bg-[#181818] rounded-2xl shadow-xl p-6 md:p-12">
+        <div class="w-full md:w-1/2 flex-shrink-0 flex justify-center">
+          <img src="pictures/pic.jpeg" alt="Visual Storytelling" class="rounded-xl shadow-2xl w-full max-w-md object-cover aspect-video" />
+        </div>
+        <div class="w-full md:w-1/2 flex flex-col items-start justify-center">
+          <h3 class="text-2xl md:text-3xl font-bold text-white mb-4">Emotion in Every Frame</h3>
+          <p class="text-lg text-gray-300 mb-6">We capture the moments that define your brand and move your audience.</p>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 w-full">
+            <div class="bg-black/70 border border-gold rounded-lg p-4 flex flex-col items-center text-center">
+              <i class="fas fa-star text-gold text-2xl mb-2"></i>
+              <span class="font-semibold text-white">Cinematic Quality</span>
+            </div>
+            <div class="bg-black/70 border border-gold rounded-lg p-4 flex flex-col items-center text-center">
+              <i class="fas fa-bolt text-gold text-2xl mb-2"></i>
+              <span class="font-semibold text-white">Fast Turnaround</span>
+            </div>
+            <div class="bg-black/70 border border-gold rounded-lg p-4 flex flex-col items-center text-center">
+              <i class="fas fa-users text-gold text-2xl mb-2"></i>
+              <span class="font-semibold text-white">Team of Visionaries</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="overview-highlights"></div>
   </section>
 
   <!-- Benefits Grid -->
-  <section class="benefits-grid">
-    <!-- Benefits will be injected by JS -->
+  <section class="benefits-grid py-16 bg-[#181818]">
+    <div class="max-w-5xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold text-gold mb-10 text-center tracking-tight">Our Benefits</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-black/80 border border-gold rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-camera-retro text-gold text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Brand Shoots</h3>
+          <p class="text-gray-300">Professional photography for products, people, and places.</p>
+        </div>
+        <div class="bg-black/80 border border-gold rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-video text-gold text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Commercials</h3>
+          <p class="text-gray-300">High-impact video ads and brand films.</p>
+        </div>
+        <div class="bg-black/80 border border-gold rounded-2xl p-8 flex flex-col items-center text-center shadow-lg hover:scale-105 transition-transform duration-300">
+          <i class="fas fa-images text-gold text-4xl mb-4"></i>
+          <h3 class="text-xl font-bold text-white mb-2">Event Coverage</h3>
+          <p class="text-gray-300">Capture every moment with style and precision.</p>
+        </div>
+      </div>
+    </div>
   </section>
 
   <!-- Process Section -->
-  <section class="process-section accordion-process-section">
-    <h2 class="section-title">Our Process</h2>
-    <div class="accordion-timeline">
-      <div class="accordion-item">
-        <button class="accordion-header">1. Creative Brief <i class="fas fa-chevron-down"></i></button>
+  <section class="process-section accordion-process-section py-16 bg-[#0a0a0a]">
+    <h2 class="section-title text-3xl md:text-4xl font-bold text-gold mb-8 text-center">Our Process</h2>
+    <div class="accordion-timeline luxury-step-timeline mx-auto">
+      <div class="accordion-item process-step">
+        <button class="accordion-header flex items-center justify-between w-full">
+          <span><span class="inline-block process-icon gold mr-3">1</span> Consult</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
         <div class="accordion-body">
-          <p>We listen to your story and goals to shape the vision.</p>
+          <p>We plan your shoot for maximum impact.</p>
         </div>
       </div>
-      <div class="accordion-item">
-        <button class="accordion-header">2. Shoot & Direct <i class="fas fa-chevron-down"></i></button>
+      <div class="accordion-item process-step">
+        <button class="accordion-header flex items-center justify-between w-full">
+          <span><span class="inline-block process-icon gold mr-3">2</span> Shoot</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
         <div class="accordion-body">
-          <p>Our team captures every detail with cinematic precision.</p>
+          <p>Our team captures your vision on set or location.</p>
         </div>
       </div>
-      <div class="accordion-item">
-        <button class="accordion-header">3. Edit & Polish <i class="fas fa-chevron-down"></i></button>
+      <div class="accordion-item process-step">
+        <button class="accordion-header flex items-center justify-between w-full">
+          <span><span class="inline-block process-icon gold mr-3">3</span> Edit</span>
+          <i class="fas fa-chevron-down"></i>
+        </button>
         <div class="accordion-body">
-          <p>We craft your visuals into a compelling, luxury narrative.</p>
+          <p>We deliver polished, ready-to-use assets.</p>
         </div>
       </div>
-      <div class="accordion-item">
-        <button class="accordion-header">4. Deliver & Celebrate <i class="fas fa-chevron-down"></i></button>
-        <div class="accordion-body">
-          <p>We deliver on time and celebrate your brand’s new look.</p>
-        </div>
-        <div class="flex justify-center mt-12">
+      <div class="timeline-cta flex justify-center mt-12">
         <a href="index.html#contact" class="cta-btn glow px-8 py-4 text-lg font-semibold rounded-full bg-gradient-to-r from-gold to-amber-500 text-black shadow-lg hover:from-amber-500 hover:to-gold transition-all duration-300">Get Started</a>
-      </div>
       </div>
     </div>
   </section>
@@ -430,5 +464,21 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
   <script src="service-premium.js"></script>
+  <script>
+    // Responsive accordion logic for process section
+    document.addEventListener('DOMContentLoaded', function() {
+      const items = document.querySelectorAll('.accordion-timeline .accordion-item');
+      items.forEach(item => {
+        const header = item.querySelector('.accordion-header');
+        header.addEventListener('click', function() {
+          const isActive = item.classList.contains('active');
+          // Close all
+          items.forEach(i => i.classList.remove('active'));
+          // Open if not already
+          if (!isActive) item.classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
